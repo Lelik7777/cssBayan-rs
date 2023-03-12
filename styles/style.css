@@ -5,10 +5,11 @@
     --bg-border: rgb(231, 236, 240);
     --content-width: 120rem;
     --main-color: rgb(0, 89, 217);
+    --font-size: 62.5%;
 }
 
 html {
-    font-size: 10px;
+    font-size: var(--font-size);
 }
 
 body {
@@ -63,8 +64,9 @@ input {
 }
 
 .item__img {
+    display: flex;
+    justify-content: center;
     height: 0;
-    align-self: center;
     border-radius: 1rem;
     overflow: hidden;
     opacity: 0;
@@ -72,13 +74,13 @@ input {
 }
 
 .item__img img {
-    width: 80%;
+    width: 50%;
 }
 
 .accordion__item:hover .item__img {
     height: 100%;
     opacity: 1;
-    transition: opacity 1s;
+    transition: opacity 1s ease-out;
 }
 
 .accordion__item:hover .item__icon {
@@ -93,6 +95,10 @@ input {
     color: black;
 }
 
+input:checked ~ .item__header {
+    color: black;
+}
+
 input:checked ~ .item__img {
     height: 100%;
     opacity: 1;
@@ -103,6 +109,10 @@ input:checked ~ .item__header .item__icon {
     transform: rotate(45deg);
 }
 
+.accordion__item:active {
+    opacity: 0.3;
+}
+
 /* when hover is supported */
 @media (hover: hover) {
     .accordion__item:hover {
@@ -110,40 +120,22 @@ input:checked ~ .item__header .item__icon {
     }
 }
 
-/*.accordion:hover .icon-plus {*/
-/*    display: inline-block;*/
-/*    !*transform: rotate(45deg) translateY(20%);*!*/
-/*}*/
+@media screen and (max-width: 820px) {
+    :root {
+        --font-size: 55%;
+    }
 
-/*.accordion:hover .element__title {*/
-/*    color: rgb(0, 89, 217);*/
-/*}*/
+    .item__img img {
+        width: 70%;
+    }
+}
 
-/*.accordion__element {*/
-/*    border-top: 1px solid rgb(217, 222, 228);*/
-/*    display: flex;*/
-/*    flex-direction: column;*/
-/*    flex-basis: 100%;*/
-/*}*/
+@media screen and (max-width: 320px) {
+    :root {
+        --font-size: 45%;
+    }
 
-/*.element__container {*/
-/*    display: flex;*/
-/*    justify-content: space-between;*/
-/*}*/
-
-
-/*.element__image {*/
-/*    max-width: 50%;*/
-/*    align-self: center;*/
-/*    display: none;*/
-/*}*/
-
-/*.icon-plus {*/
-/*    width: 50%;*/
-/*    background-image: url("./assets/plus.svg");*/
-/*    background-repeat: no-repeat;*/
-/*    width: 28px;*/
-/*    display: none;*/
-/*    transition: 0.5s;*/
-/*    transform: translateY(20%);*/
-/*}*/
+    .item__img img {
+        width: 90%;
+    }
+}
