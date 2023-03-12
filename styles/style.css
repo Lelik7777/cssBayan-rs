@@ -32,9 +32,11 @@ body {
 }
 
 input {
-    opacity: 0;
+    appearance: none;
+    -webkit-appearance: none;
+    position: absolute;
+    width: 0;
     height: 0;
-    visibility: hidden;
 }
 
 .accordion__item {
@@ -57,7 +59,7 @@ input {
     width: 3rem;
     height: 3rem;
     opacity: 0;
-    transition: all 0.2s;
+    transition: all 0.2s ease-out;
 }
 
 .item__img {
@@ -66,7 +68,7 @@ input {
     border-radius: 1rem;
     overflow: hidden;
     opacity: 0;
-    transition: opacity 0.5s;
+    transition: opacity 0.5s ease-out;
 }
 
 .item__img img {
@@ -91,10 +93,14 @@ input {
     color: black;
 }
 
-input:checked ~ .accordion__img {
+input:checked ~ .item__img {
     height: 100%;
     opacity: 1;
     transition: opacity 1s;
+}
+
+input:checked ~ .item__header .item__icon {
+    transform: rotate(45deg);
 }
 
 /* when hover is supported */
