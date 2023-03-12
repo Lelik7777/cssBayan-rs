@@ -35,7 +35,6 @@ body {
 input {
     appearance: none;
     -webkit-appearance: none;
-    position: absolute;
     width: 0;
     height: 0;
 }
