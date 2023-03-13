@@ -2,7 +2,7 @@
 
 You should create an accordion with HTML and CSS only.
 
-<kbd>![screenshot](./assets/accordion.png)</kbd>
+<kbd>![screenshot](cssBayan/assets/accordion.png)</kbd>
 
 ## Functional requirements:
 1. Design is at your discretion, but the layout of an accordion should include a meme image, text, and an icon. The placement of these elements should match the provided above example image;
@@ -22,14 +22,14 @@ You should create an accordion with HTML and CSS only.
 ## Clarifications - Accordion behavior:
 
 ### Note 1. commonHover.gif.
-<kbd>![screenshot](./assets/commonHover.gif)</kbd>
+<kbd>![screenshot](cssBayan/assets/commonHover.gif)</kbd>
 
 ***Recorded scenario for desktop device:***
 - User moves cursor over the accordion (hover)
 - User removes cursor (hover) from the accordion
 
 ### Note 2. hoverOverItem.gif.
-<kbd>![screenshot](./assets/hoverOverItem.gif)</kbd>
+<kbd>![screenshot](cssBayan/assets/hoverOverItem.gif)</kbd>
 
 ***Recorded scenario for desktop device:***
 - the 4th meme is already chosen (clicked) by the user
@@ -43,7 +43,7 @@ You should create an accordion with HTML and CSS only.
 - the 4th meme stays be chosen
 
 ### Note 3. clickActiveItem.gif.
-<kbd>![screenshot](./assets/clickActiveItem.gif)</kbd>
+<kbd>![screenshot](cssBayan/assets/clickActiveItem.gif)</kbd>
 ***Recorded scenario for desktop device:***
 - the 4th meme is already chosen (clicked) by the user
 - User moves cursor over 4th meme (hover)
