@@ -69,7 +69,7 @@ input {
     border-radius: 1rem;
     overflow: hidden;
     opacity: 0;
-    transition: opacity 0.5s ease-out;
+    transition: opacity 0.4s, height 0.5s;
 }
 
 .item__img img {
@@ -77,9 +77,8 @@ input {
 }
 
 .accordion__item:hover .item__img {
-    height: 100%;
+    height:45rem;
     opacity: 1;
-    transition: opacity 1s ease-out;
 }
 
 .accordion__item:hover .item__icon {
@@ -99,7 +98,7 @@ input:checked ~ .item__header {
 }
 
 input:checked ~ .item__img {
-    height: 100%;
+    height: 45rem;
     opacity: 1;
     transition: opacity 1s;
 }
