@@ -69,7 +69,9 @@ input {
     border-radius: 1rem;
     overflow: hidden;
     opacity: 0;
-    transition: opacity 0.4s, height 0.5s;
+    /*transition: opacity 0.4s, height 0.5s,transform 0.5s;*/
+    transition: all 0.5s;
+    transform: scale(0);
 }
 
 .item__img img {
@@ -79,6 +81,7 @@ input {
 .accordion__item:hover .item__img {
     height:45rem;
     opacity: 1;
+    transform: scale(1);
 }
 
 .accordion__item:hover .item__icon {
@@ -101,6 +104,7 @@ input:checked ~ .item__img {
     height: 45rem;
     opacity: 1;
     transition: opacity 1s;
+    transform: scale(1);
 }
 
 input:checked ~ .item__header .item__icon {
